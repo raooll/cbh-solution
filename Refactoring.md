@@ -9,3 +9,6 @@ You've been asked to refactor the function `deterministicPartitionKey` in [`dpk.
 You will be graded on the exhaustiveness and quality of your unit tests, the depth of your refactor, and the level of insight into your thought process provided by the written explanation.
 
 ## Your Explanation Here
+I've refactored the above code and added two more private functions.
+1. "generateHash" : This function takes some data and generates a sha3-512 has. I have abstracted the has generation login into it's own function as it is repeatedly used and so that this can be easily changed as and when required.
+2. "getCandidate": This fuction takes an event and returns a possible candidate for the partionKey. I have added this function as it help concentrate the candidate generation login from the event.
